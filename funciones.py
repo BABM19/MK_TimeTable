@@ -1,6 +1,6 @@
 from random import randrange, choice
 
-def matriz2str(matriz):
+def matriz_2_str(matriz):
 
     """Recibe una matriz como argumento y devuelve una cadenade caracteres con
     la matriz imprimible"""
@@ -20,7 +20,7 @@ def print_dicc_matricial(datos_grupos):
 
     for grupo in datos_grupos:
         print(grupo+':')
-        print(matriz2str(datos_grupos[grupo]))
+        print(matriz_2_str(datos_grupos[grupo]))
 
 def cargar_datos(file_read):
 
@@ -88,7 +88,7 @@ def crear_horarios(datos_grupos):
             horarios2[profesor].append(['-','-','-','-','-'])
     return [horarios1, horarios2]
 
-def buscar1libres(horario, str):
+def buscar_libres(horario, str):
 
     """Recibe una matriz como argumento y devuelve una lista de tuplas (con
     argumento 'l') o una unica tupla aleatoria de la lista (con argumento 'o')
@@ -113,12 +113,12 @@ def buscar1libres(horario, str):
     else:
         return 0
 
-def buscar2libres(hor1, hor2, str): #en prueba
+def buscar_intersecciones(hor1, hor2, str): #en prueba
 
     """Devuelve lista de espacios libres o solo uno de los datos libres"""
 
-    libre1 = buscar1libres(hor1, 'l')
-    libre2 = buscar1libres(hor2, 'l')
+    libre1 = buscar_libres(hor1, 'l')
+    libre2 = buscar_libres(hor2, 'l')
     libres = []
     if libre1 == [] or libre2 == []:
         return []
