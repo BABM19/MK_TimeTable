@@ -1,0 +1,13 @@
+FORMATO DEL DOCUMENTO DE DATOS:
+    
+    -Primera fila: Todas las materias e la institución. Empezando y separadas por ';'.
+        
+        Ejm de sintaxis: ;Matematicas;Fisica;Sociales...
+        
+    -Grupos:
+        1.Grupo.
+        2.Horas a la semana de la materia.
+        3.Profesor de la materia.
+
+        Ejm de sintaxis:
+            1A;5-Alfonso;3-Rodriga;...
